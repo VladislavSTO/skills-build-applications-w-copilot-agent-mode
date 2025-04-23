@@ -22,6 +22,6 @@ def api_root(request, format=None):
     })
 
 urlpatterns = [
+    path('', api_root, name='api-root'),  # Корневой URL теперь возвращает список API endpoints
     path('api/', include(router.urls)),
-    path('api/', api_root, name='api-root'),
 ]
