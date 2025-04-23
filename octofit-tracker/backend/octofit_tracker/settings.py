@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
+# This project uses djongo as the database engine for MongoDB integration.
 
 from pathlib import Path
 
@@ -81,6 +82,7 @@ DATABASES = {
     "default": {
         "ENGINE": "djongo",
         "NAME": "octofit_db",
+        # djongo is used as the database engine for MongoDB
     }
 }
 
