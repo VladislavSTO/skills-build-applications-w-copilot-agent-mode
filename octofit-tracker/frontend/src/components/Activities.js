@@ -4,7 +4,7 @@ function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch('https://fluffy-space-meme-v5j4g4x4g9rfwvgj-8000.app.github.dev/api/activity/')
+    fetch('https://fluffy-space-meme-v5j4g4x4g9rfwvgj-8000.app.github.dev/api/activities/')
       .then(res => res.json())
       .then(data => setActivities(data));
   }, []);
