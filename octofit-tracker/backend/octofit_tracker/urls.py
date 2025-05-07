@@ -7,7 +7,7 @@ from rest_framework.decorators import api_view
 router = DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'teams', TeamViewSet)
-router.register(r'activity', ActivityViewSet)
+router.register(r'activities', ActivityViewSet)
 router.register(r'workouts', WorkoutViewSet)
 router.register(r'leaderboard', LeaderboardViewSet)
 
@@ -16,7 +16,7 @@ def api_root(request, format=None):
     return Response({
         'users': '/api/users/',
         'teams': '/api/teams/',
-        'activity': '/api/activity/',
+        'activities': '/api/activities/',
         'workouts': '/api/workouts/',
         'leaderboard': '/api/leaderboard/',
     })
