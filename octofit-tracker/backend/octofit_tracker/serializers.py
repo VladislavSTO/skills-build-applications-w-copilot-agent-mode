@@ -13,6 +13,7 @@ class TeamSerializer(serializers.ModelSerializer):
         fields = ['_id', 'name', 'members']
 
 class ActivitySerializer(serializers.ModelSerializer):
+    user = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), required=True)
     class Meta:
         model = Activity
         fields = ['_id', 'user', 'activity_type', 'duration', 'distance', 'timestamp']
